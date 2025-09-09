@@ -6,31 +6,34 @@ using System.Threading.Tasks;
 
 namespace InheritanceExam
 {
-    internal class Rectangle : Square
+    public class Rectangle : Square
     {
         //Camps
-        private float _b;
+        private double _b;
 
 
 
         //Propieties
-        public float B
+        public double B
         {
             get => _b;
             set
             {
-                _b = ValidateB(value);
+                _b =ValidateB(value);
             }
         }
 
-
-
-        public Rectangle(string Name, float _a, float _b) : base(Name, _a)
+        //Constructor
+        public Rectangle(string Name, double _a, double _b) : base(Name, _a)
         {
+            this.Name = Name;
+            A = _a;
             B = _b;
+
         }
 
-        private float ValidateB(float value)
+        //Methods
+        private double ValidateB(double value)
         { 
             if (value <= 0)
             {
@@ -40,7 +43,7 @@ namespace InheritanceExam
         }
 
 
-        public override float GetArea()
+        public override double GetArea()
         {
             if (A <= 0 || B <= 0)
             {
@@ -49,7 +52,7 @@ namespace InheritanceExam
             return A * B;
         }
 
-        public override float GetPerimeter()
+        public override double GetPerimeter()
         {
             if (A <= 0 || B <= 0)
             {

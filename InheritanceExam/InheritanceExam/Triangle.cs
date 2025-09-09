@@ -24,19 +24,18 @@ namespace InheritanceExam
             } 
         }
 
-
         public double H 
         { 
             get => _h; 
             set 
             {
-                _c = ValidateH(value);
+                _h = ValidateH(value);
             }
         }
 
 
         //constructor
-        public Triangle(string Name, float _a, float _b, double _c, double _h) : base(Name, _a, _b)
+        public Triangle(string Name, double _a, double _b, double _c, double _h) : base(Name, _a, _b)
         {
             C = _c;
             H = _h;
@@ -61,8 +60,23 @@ namespace InheritanceExam
             return C;
         }
 
-        public override float GetArea() => (float)((double)B * H / 2);
+        public override double GetArea()
+        {
+            if (B <= 0 || H <= 0)
+            {
+                throw new Exception($"The Area {B} or {H} isn´t Valid");
+            }
+            return (B * H) / 2;
 
-        public override float GetPerimeter() => (float)((double)A + B + C);
+        }
+
+        public override double GetPerimeter()
+        {
+            if (A <= 0 || B <= 0 || C <= 0)
+            {
+                throw new Exception($"The Area {A} or {B} or {C} isn´t Valid");
+            }
+            return A + B + C;
+        }
     }
 }

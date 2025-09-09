@@ -8,11 +8,13 @@ namespace InheritanceExam
         public string Name { get; set; } = null!;
 
         // Methods
-        public abstract float GetArea();
-        public abstract float GetPerimeter();
+        public abstract double GetArea();
+        public abstract double GetPerimeter();
         public override string ToString()
         {
-            return $"{Name, -15} | Área: {GetArea(),10:F2} | Perímetro: {GetPerimeter(),10:F2}";
+            return $"{Name,-15} => Area.....: {GetArea(),18:N5}   Perimeter: {GetPerimeter(),18:N5}";
         }
+
     }
 }
+

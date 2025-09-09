@@ -9,11 +9,11 @@ namespace InheritanceExam
     internal class Kite : Rhombus
     {
         //Camps
-        private float _b;
+        private double _b;
 
 
         //Propieties
-        public float B 
+        public double B 
         { 
             get => _b; 
             set
@@ -22,12 +22,14 @@ namespace InheritanceExam
             }
         }
 
-
-        public Kite(string Name, float _a, float _b, float _d1, float _d2) : base(Name, _a, _d1, _d2)
+        //Constructor
+        public Kite(string Name, double _a, double _b, double _d1, double _d2) : base(Name, _a, _d1, _d2)
         {
             B = _b;
         }
-        private float ValidateB(float B)
+
+        //Methods
+        private double ValidateB(double B)
         {
             if (B <= 0)
             {
@@ -36,7 +38,7 @@ namespace InheritanceExam
             return B;
         }
 
-        public override float GetArea()
+        public override double GetArea()
         {
             if (D1 <= 0 || D2 <= 0)
             {
@@ -45,7 +47,7 @@ namespace InheritanceExam
             return (D1 * D2) / 2;
         }
 
-        public override float GetPerimeter()
+        public override double GetPerimeter()
         {
             if (A <= 0 || B <= 0)
             {

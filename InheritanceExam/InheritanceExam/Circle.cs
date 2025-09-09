@@ -9,10 +9,9 @@ namespace InheritanceExam
     public class Circle : GeometricFigure
     {
         //Camps
-        private float _r;
+        private double _r;
 
-        //Methods
-        public float R 
+        public double R 
         {
             get => _r;
             set
@@ -21,13 +20,15 @@ namespace InheritanceExam
             }
         }
 
-        public Circle(string name, float r)
+        //Constructor
+        public Circle(string name, double r)
         {
             Name = name;
             R = r;
         }
 
-        private float ValidateR(float value)
+        //Methods
+        private double ValidateR(double value)
         {
             if ( value <= 0)
             {
@@ -37,22 +38,22 @@ namespace InheritanceExam
             
         }
 
-        public override float GetArea()
+        public override double GetArea()
         {
             if (R < 0)
             {
                 throw new Exception($"The Radious {R} isn´t Valid");
             }
-            return (float)(Math.PI * Math.Pow(R, 2));
+            return (Math.PI * Math.Pow(R, 2));
         }
 
-        public override float GetPerimeter()
+        public override double GetPerimeter()
         {
             if (R < 0)
             {
                 throw new Exception($"The Radious {R} isn´t Valid");
             }
-            return (float)(2 * Math.PI * R);
+            return (2 * Math.PI * R);
         }
     }
 }

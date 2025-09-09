@@ -9,10 +9,10 @@ namespace InheritanceExam
     public class Square : GeometricFigure
     {
         //Camps
-        private float _a;
+        private double _a;
 
         //Propieties
-        public float A 
+        public double A 
         {
             get => _a;
             set
@@ -21,41 +21,26 @@ namespace InheritanceExam
             }
         }
 
-        public Square(string name, float _a)
+        //Constructor
+        public Square(string name, double _a)
         {
             Name = name;
             A = _a;
         }
-        //Methods
 
-        private float ValidateA(float value)
+        //Methods
+        private double ValidateA(double value)
         {
-            if (value <= 0)
-            {
-                throw new Exception($"The Area {value} isn´t Valid");
-            }
             return value;
         }
-        public override float GetArea()
+        public override double GetArea()
         {
-            if (A <= 0)
-            {
-                throw new Exception($"The Area {A} isn´t Valid");
-            }
-            return A * A;
+            return Math.Pow(A, 2);
         }
 
-        public override float GetPerimeter()
+        public override double GetPerimeter()
         {
-            if (A <= 0)
-            {
-                throw new Exception($"The Area {A} isn´t Valid");
-            }
             return 4 * A;
         }
-
-    
-
- 
     }
 }

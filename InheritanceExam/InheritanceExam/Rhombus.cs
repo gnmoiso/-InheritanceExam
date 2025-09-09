@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace InheritanceExam
 {
-    internal class Rhombus : Square
+    public class Rhombus : Square
     {
         //Camps
-        private float _d1;
-        private float _d2;
+        private double _d1;
+        private double _d2;
 
 
 
         //Propieties
-        public float D1 
+        public double D1 
         { 
             get => _d1; 
             set
@@ -24,7 +24,7 @@ namespace InheritanceExam
             }
         }
 
-        public float D2 
+        public double D2 
         { 
             get => _d2; 
             set
@@ -33,12 +33,15 @@ namespace InheritanceExam
             }
         }
 
-        public Rhombus(string Name, float _a, float _d1, float _d2) : base(Name, _a)
+        //Constructor
+        public Rhombus(string Name, double _a, double _d1, double _d2) : base(Name, _a)
         {
             D1 = _d1;
             D2 = _d2;
         }
-        private float ValidateD1(float D1)
+
+        //Methods
+        private double ValidateD1(double D1)
         {
             if (D1 <= 0)
             {
@@ -47,7 +50,7 @@ namespace InheritanceExam
             return D1;
         }
 
-        private float ValidateD2(float D2)
+        private double ValidateD2(double D2)
         {
             if(D2 <= 0)
             {
@@ -56,7 +59,7 @@ namespace InheritanceExam
             return D2;
         }
 
-        public override float GetArea()
+        public override double GetArea()
         {
             if (D1 <= 0 || D2 <= 0)
             {
@@ -65,7 +68,7 @@ namespace InheritanceExam
             return (D1 * D2) / 2;
         }
 
-        public override float GetPerimeter()
+        public override double GetPerimeter()
         {
             if (A <= 0)
             {

@@ -9,11 +9,11 @@ namespace InheritanceExam
     internal class Parallelogram : Rectangle
     {
         //camps
-        private float _h;
+        private double _h;
 
 
         //propieties
-        public float H 
+        public double H 
         { 
             get => _h; 
             set
@@ -23,14 +23,14 @@ namespace InheritanceExam
         }
 
         //constructor
-        public Parallelogram(string Name, float _a, float _b, float _h) : base(Name, _a, _b)
+        public Parallelogram(string Name, double _a, double _b, double _h) : base(Name, _a, _b)
         {
             H = _h;
         }
 
 
         //methods
-        private float ValidateH(float value)
+        private double ValidateH(double value)
         {
             if (value <= 0)
             {
@@ -40,16 +40,16 @@ namespace InheritanceExam
         }
 
 
-        public override float GetArea()
+        public override double GetArea()
         {
-            if (A <= 0 || H <= 0)
+            if (B <= 0 || H <= 0)
             {
-                throw new Exception($"The Area {A} or {H} isn´t Valid");
+                throw new Exception($"The Area {B} or {H} isn´t Valid");
             }
-            return A * H;
+            return B * H;
         }
 
-        public override float GetPerimeter()
+        public override double GetPerimeter()
         {
             if (A <= 0 || B <= 0)
             {
