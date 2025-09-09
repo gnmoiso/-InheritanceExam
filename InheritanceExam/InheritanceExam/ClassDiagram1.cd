@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="InheritanceExam.Triangle">
-    <Position X="1.5" Y="1.25" Width="1.5" />
+    <Position X="5.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAmEABAAA=</HashCode>
       <FileName>Triangle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InheritanceExam.Circle">
-    <Position X="11" Y="1.75" Width="1.5" />
+    <Position X="10.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAEAACAAEAAAAQA=</HashCode>
       <FileName>Circle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InheritanceExam.GeometricFigure">
-    <Position X="8" Y="1.75" Width="2" />
+    <Position X="7.5" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAEAAAAAEAAAAAA=</HashCode>
       <FileName>GeometricFigure.cs</FileName>
@@ -23,9 +23,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="InheritanceExam.Rhombus">
-    <Position X="11.75" Y="4.75" Width="1.5" />
+    <Position X="10.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAQAAAAAAAIAAkAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAQAAAAAAEIAAkAEAAAAAA=</HashCode>
       <FileName>Rhombus.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -34,6 +34,34 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAQAAAAAAAAAAAAAAAAAEAAAAAMAAAAAA=</HashCode>
       <FileName>Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InheritanceExam.Kite">
+    <Position X="13" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAIAAAAAAAAAEAAAAAEAEAAAA=</HashCode>
+      <FileName>Kite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InheritanceExam.Rectangle">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAIAAAAAAAAAEAAAAAEAEAAAA=</HashCode>
+      <FileName>Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InheritanceExam.Parallelogram">
+    <Position X="3.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAGEAAAAA=</HashCode>
+      <FileName>Parallelogram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InheritanceExam.Trapeze">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAFAAAAAA=</HashCode>
+      <FileName>Trapeze.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

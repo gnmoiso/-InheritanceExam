@@ -17,42 +17,45 @@ namespace InheritanceExam
             get => _a;
             set
             {
-                A = ValidateA(value);
+                _a = ValidateA(value);
             }
         }
 
-        //Methods
-        public override float GetArea(float A)
+        public Square(string name, float _a)
         {
-            float L = (float)Math.Sqrt(A);
-            if (A <= 0)
-            {
-                throw new Exception($"The Area {A} isn´t Valid");
-            }
-            return L * L;
-        }
-
-        public override float GetPerimeter(float A)
-        {
-            if (A <= 0)
-            {
-                throw new Exception($"The Area {A} isn´t Valid");
-            }
-            return 4 * (float)Math.Sqrt(A);
-        }
-
-        private float ValidateA(float A)
-        {
-            if (A <= 0)
-            {
-                throw new Exception($"The Area {A} isn´t Valid");
-            }
-            return A;
-        }
-
-        public Square(float _a)
-        {
+            Name = name;
             A = _a;
         }
+        //Methods
+
+        private float ValidateA(float value)
+        {
+            if (value <= 0)
+            {
+                throw new Exception($"The Area {value} isn´t Valid");
+            }
+            return value;
+        }
+        public override float GetArea()
+        {
+            if (A <= 0)
+            {
+                throw new Exception($"The Area {A} isn´t Valid");
+            }
+            return A * A;
+        }
+
+        public override float GetPerimeter()
+        {
+            if (A <= 0)
+            {
+                throw new Exception($"The Area {A} isn´t Valid");
+            }
+            return 4 * A;
+        }
+
+    
+
+ 
     }
 }

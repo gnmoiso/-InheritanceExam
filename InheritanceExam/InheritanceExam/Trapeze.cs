@@ -6,37 +6,51 @@ using System.Threading.Tasks;
 
 namespace InheritanceExam
 {
-    public class Trapeze : Triangle
+    internal class Trapeze : Triangle
     {
         //Camps
-        private float _d;
-
+        private double _d;
         //Propieties
-        public float D 
+        public double D 
         { 
-            get => _d;
+            get => _d; 
             set
-            { 
-                D = ValidateD(value);
+            {
+                _d = ValidateD(value);
             }
-            
         }
 
-        //Constructor
-        public float GetArea(float B, float D, float H)
-        { 
-            return (B + D) * H/2; 
-        }
-        public float GetPerimeter(float A, float B, float C, float D)
+        private double ValidateD(double value)
         {
-            return A + B + C + D;
+            if (value <= 0)
+            {
+                throw new Exception($"The Side D {value} isn´t Valid");
+            }
+            return value;
         }
 
-        public float Trapeze()
-        { }
-        private float ValidateD(float value)
+        public Trapeze(string Name, float _a, float _b, float _c, float _h, double _d) : base(Name, _a, _b, _c, _h)
         {
-            throw new NotImplementedException();
+            D = _d;
         }
+
+        public override float GetArea()
+        {
+            if (A <= 0 || B <= 0 || H <= 0)
+            {
+                throw new Exception($"The Side {A} or {B} or Height {H} isn´t Valid");
+            }
+            return (float)((double)(A + B) * H / 2);
+        }
+
+        public override float GetPerimeter()
+        {
+            if (A <= 0 || B <= 0 || C <= 0 || D <= 0)
+            {
+                throw new Exception($"The Side {A} or {B} or {C} or {D} isn´t Valid");
+            }
+            return (float)((double)A + B + C + D);
+        }
+
     }
 }

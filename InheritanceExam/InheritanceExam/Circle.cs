@@ -17,26 +17,27 @@ namespace InheritanceExam
             get => _r;
             set
             {
-                R = ValidateR(value);
+                _r = ValidateR(value);
             }
         }
 
-        public Circle(float r)
+        public Circle(string name, float r)
         {
-            _r = r;
+            Name = name;
+            R = r;
         }
 
-        private float ValidateR(float R)
+        private float ValidateR(float value)
         {
-            if ( R <= 0)
+            if ( value <= 0)
             {
-                throw new Exception($"The Radious {R} isn´t Valid");
+                throw new Exception($"The Radious {value} isn´t Valid");
             }
-            return R;
+            return value;
             
         }
 
-        public override float GetArea(float R)
+        public override float GetArea()
         {
             if (R < 0)
             {
@@ -45,7 +46,7 @@ namespace InheritanceExam
             return (float)(Math.PI * Math.Pow(R, 2));
         }
 
-        public override float GetPerimeter(float R)
+        public override float GetPerimeter()
         {
             if (R < 0)
             {
