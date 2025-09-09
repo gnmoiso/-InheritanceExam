@@ -21,36 +21,24 @@ namespace InheritanceExam
         }
 
         //constructor
-        public Trapeze(string Name, double _a, double _b, double _c, double _d, double _h) : base(Name, _a, _b, _c, _h)
+        public Trapeze(string Name, double a, double b, double c, double d, double h) : base(Name, a, b, c, h)
         {
-            D = _d;
+            D = d;
         }
 
         //methods
         private double ValidateD(double value)
         {
-            if (value <= 0)
-            {
-                throw new Exception($"The Side D {value} isn´t Valid");
-            }
             return value;
         }
 
         public override double GetArea()
         {
-            if (B <= 0 || D <= 0 || H <= 0)
-            {
-                throw new Exception($"The Side {B} or {D} or Height {H} isn´t Valid");
-            }
             return (B + D) * (H / 2);
         }
 
         public override double GetPerimeter()
         {
-            if (A <= 0 || B <= 0 || C <= 0 || D <= 0)
-            {
-                throw new Exception($"The Side {A} or {B} or {C} or {D} isn´t Valid");
-            }
             return A + B + C + D;
         }
 

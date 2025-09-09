@@ -35,47 +35,31 @@ namespace InheritanceExam
 
 
         //constructor
-        public Triangle(string Name, double _a, double _b, double _c, double _h) : base(Name, _a, _b)
+        public Triangle(string Name, double a, double b, double c, double h) : base(Name, a, b)
         {
-            C = _c;
-            H = _h;
+            C = c;
+            H = h;
         }
 
         //methods
         private double ValidateH(double H)
         {
-            if (H <= 0)
-            {
-                throw new Exception($"The Height {H} isn´t Valid");
-            }
             return H;
         }
 
         private double ValidateC(double C)
         {
-            if (C <= 0)
-            {
-                throw new Exception($"The Height {C} isn´t Valid");
-            }
             return C;
         }
 
         public override double GetArea()
         {
-            if (B <= 0 || H <= 0)
-            {
-                throw new Exception($"The Area {B} or {H} isn´t Valid");
-            }
             return (B * H) / 2;
 
         }
 
         public override double GetPerimeter()
         {
-            if (A <= 0 || B <= 0 || C <= 0)
-            {
-                throw new Exception($"The Area {A} or {B} or {C} isn´t Valid");
-            }
             return A + B + C;
         }
     }

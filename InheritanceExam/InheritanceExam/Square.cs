@@ -22,10 +22,10 @@ namespace InheritanceExam
         }
 
         //Constructor
-        public Square(string name, double _a)
+        public Square(string name, double a)
         {
             Name = name;
-            A = _a;
+            A = a;
         }
 
         //Methods
