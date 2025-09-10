@@ -11,7 +11,6 @@ namespace InheritanceExam
         //camps
         private double _h;
 
-
         //propieties
         public double H 
         { 
@@ -23,27 +22,11 @@ namespace InheritanceExam
         }
 
         //constructor
-        public Parallelogram(string Name, double a, double b, double h) : base(Name, a, b)
-        {
-            H = h;
-        }
-
+        public Parallelogram(string Name, double a, double b, double h) : base(Name, a, b) => H = h;
 
         //methods
-        private double ValidateH(double value)
-        {
-            return value;
-        }
-
-
-        public override double GetArea()
-        {
-            return B * H;
-        }
-
-        public override double GetPerimeter()
-        {
-            return 2 * (A + B);
-        }
+        private double ValidateH(double value) => value;
+        public override double GetArea() => B * H;
+        public override double GetPerimeter() => 2 * (A + B);
     }
 }

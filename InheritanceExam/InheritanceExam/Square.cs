@@ -29,18 +29,8 @@ namespace InheritanceExam
         }
 
         //Methods
-        private double ValidateA(double value)
-        {
-            return value;
-        }
-        public override double GetArea()
-        {
-            return Math.Pow(A, 2);
-        }
-
-        public override double GetPerimeter()
-        {
-            return 4 * A;
-        }
+        private double ValidateA(double value) => value;
+        public override double GetArea() => Math.Pow(A, 2);
+        public override double GetPerimeter() => 4 * A;
     }
 }

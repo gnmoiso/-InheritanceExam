@@ -12,8 +12,6 @@ namespace InheritanceExam
         private double _d1;
         private double _d2;
 
-
-
         //Propieties
         public double D1 
         { 
@@ -23,7 +21,6 @@ namespace InheritanceExam
                 _d1 = ValidateD1(value);
             }
         }
-
         public double D2 
         { 
             get => _d2; 
@@ -41,25 +38,9 @@ namespace InheritanceExam
         }
 
         //Methods
-        private double ValidateD1(double D1)
-        {
-            return D1;
-        }
-
-        private double ValidateD2(double D2)
-        {
-            return D2;
-        }
-
-        public override double GetArea()
-        {
-            return (D1 * D2) / 2;
-        }
-
-        public override double GetPerimeter()
-        {
-            return 4 * A;
-        }
-
+        private double ValidateD1(double D1) => D1;
+        private double ValidateD2(double D2) => D2;
+        public override double GetArea() => (D1 * D2) / 2;
+        public override double GetPerimeter() => 4 * A;
     }
 }

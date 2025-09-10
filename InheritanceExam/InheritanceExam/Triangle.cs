@@ -12,8 +12,6 @@ namespace InheritanceExam
         private double _c;
         private double _h;
 
-
-
         //Propieties
         public double C 
         { 
@@ -23,7 +21,6 @@ namespace InheritanceExam
                 _c = ValidateC(value); 
             } 
         }
-
         public double H 
         { 
             get => _h; 
@@ -33,7 +30,6 @@ namespace InheritanceExam
             }
         }
 
-
         //constructor
         public Triangle(string Name, double a, double b, double c, double h) : base(Name, a, b)
         {
@@ -42,25 +38,9 @@ namespace InheritanceExam
         }
 
         //methods
-        private double ValidateH(double H)
-        {
-            return H;
-        }
-
-        private double ValidateC(double C)
-        {
-            return C;
-        }
-
-        public override double GetArea()
-        {
-            return (B * H) / 2;
-
-        }
-
-        public override double GetPerimeter()
-        {
-            return A + B + C;
-        }
+        private double ValidateH(double H) => H;
+        private double ValidateC(double C) => C;
+        public override double GetArea() => (B * H) / 2;
+        public override double GetPerimeter() => A + B + C;
     }
 }

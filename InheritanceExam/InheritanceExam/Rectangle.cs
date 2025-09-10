@@ -24,26 +24,11 @@ namespace InheritanceExam
         }
 
         //Constructor
-        public Rectangle(string Name, double a, double b) : base(Name, a)
-        {
-            B = b;
-        }
+        public Rectangle(string Name, double a, double b) : base(Name, a) => B = b;
 
         //Methods
-        private double ValidateB(double value)
-        { 
-            return value;
-        }
-
-
-        public override double GetArea()
-        {
-            return A * B;
-        }
-
-        public override double GetPerimeter()
-        {
-            return 2 * (A + B);
-        }
+        private double ValidateB(double value) => value;
+        public override double GetArea() =>  A * B;
+        public override double GetPerimeter() => 2 * (A + B);
     }
 }

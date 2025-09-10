@@ -11,7 +11,6 @@ namespace InheritanceExam
         //Camps
         private double _b;
 
-
         //Propieties
         public double B 
         { 
@@ -29,20 +28,8 @@ namespace InheritanceExam
         }
 
         //Methods
-        private double ValidateB(double B)
-        {
-            return B;
-        }
-
-        public override double GetArea()
-        {
-            return (D1 * D2) / 2;
-        }
-
-        public override double GetPerimeter()
-        {
-            return 2 * (A + B);
-        }
-
+        private double ValidateB(double B) => B;
+        public override double GetArea() => (D1 * D2) / 2;
+        public override double GetPerimeter() => 2 * (A + B);
     }
 }

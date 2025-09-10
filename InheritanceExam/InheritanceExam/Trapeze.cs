@@ -10,6 +10,7 @@ namespace InheritanceExam
     {
         //Camps
         private double _d;
+
         //Propieties
         public double D 
         { 
@@ -21,26 +22,11 @@ namespace InheritanceExam
         }
 
         //constructor
-        public Trapeze(string Name, double a, double b, double c, double d, double h) : base(Name, a, b, c, h)
-        {
-            D = d;
-        }
+        public Trapeze(string Name, double a, double b, double c, double d, double h) : base(Name, a, b, c, h) => D = d;
 
         //methods
-        private double ValidateD(double value)
-        {
-            return value;
-        }
-
-        public override double GetArea()
-        {
-            return (B + D) * (H / 2);
-        }
-
-        public override double GetPerimeter()
-        {
-            return A + B + C + D;
-        }
-
+        private double ValidateD(double value) => value;
+        public override double GetArea() => (B + D) * (H / 2);
+        public override double GetPerimeter() => A + B + C + D;
     }
 }

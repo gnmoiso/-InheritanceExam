@@ -11,6 +11,7 @@ namespace InheritanceExam
         //Camps
         private double _r;
 
+        //Propieties
         public double R 
         {
             get => _r;
@@ -28,20 +29,8 @@ namespace InheritanceExam
         }
 
         //Methods
-        private double ValidateR(double value)
-        {
-            return value;
-            
-        }
-
-        public override double GetArea()
-        {
-            return (Math.PI * Math.Pow(R, 2));
-        }
-
-        public override double GetPerimeter()
-        {
-            return (2 * Math.PI * R);
-        }
+        private double ValidateR(double value) => value;
+        public override double GetArea() => (Math.PI * Math.Pow(R, 2));
+        public override double GetPerimeter() => (2 * Math.PI * R);
     }
 }
