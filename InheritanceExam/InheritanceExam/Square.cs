@@ -15,10 +15,7 @@ namespace InheritanceExam
         public double A 
         {
             get => _a;
-            set
-            {
-                _a = ValidateA(value);
-            }
+            set => _a = ValidateA(value);
         }
 
         //Constructor

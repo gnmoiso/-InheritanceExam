@@ -16,18 +16,12 @@ namespace InheritanceExam
         public double D1 
         { 
             get => _d1; 
-            set
-            {
-                _d1 = ValidateD1(value);
-            }
+            set => _d1 = ValidateD1(value);
         }
         public double D2 
         { 
             get => _d2; 
-            set
-            {
-                _d2 = ValidateD2(value);
-            }
+            set => _d2 = ValidateD2(value);
         }
 
         //Constructor

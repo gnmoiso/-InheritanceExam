@@ -10,11 +10,7 @@ namespace InheritanceExam
         // Methods
         public abstract double GetArea();
         public abstract double GetPerimeter();
-        public override string ToString()
-        {
-            return $"{Name,-15} => Area.....: {GetArea(),18:N5}   Perimeter: {GetPerimeter(),18:N5}";
-        }
-
+        public override string ToString() => $"{Name,-18} => Area.....: {GetArea(),18:N5}   Perimeter: {GetPerimeter(),18:N5}";
     }
 }
 

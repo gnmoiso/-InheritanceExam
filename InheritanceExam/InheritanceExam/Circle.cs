@@ -15,10 +15,7 @@ namespace InheritanceExam
         public double R 
         {
             get => _r;
-            set
-            {
-                _r = ValidateR(value);
-            }
+            set => _r = ValidateR(value);
         }
 
         //Constructor

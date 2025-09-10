@@ -11,16 +11,11 @@ namespace InheritanceExam
         //Camps
         private double _b;
 
-
-
         //Propieties
         public double B
         {
             get => _b;
-            set
-            {
-                _b =ValidateB(value);
-            }
+            set => _b = ValidateB(value);
         }
 
         //Constructor

@@ -15,17 +15,11 @@ namespace InheritanceExam
         public double B 
         { 
             get => _b; 
-            set
-            {
-                _b = ValidateB(value);
-            }
+            set => _b = ValidateB(value);
         }
 
         //Constructor
-        public Kite(string Name, double a, double b, double d1, double d2) : base(Name, a, d1, d2)
-        {
-            B = b;
-        }
+        public Kite(string Name, double a, double b, double d1, double d2) : base(Name, a, d1, d2) => B = b;
 
         //Methods
         private double ValidateB(double B) => B;
