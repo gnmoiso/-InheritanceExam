@@ -8,11 +8,9 @@ namespace InheritanceExam
 {
     internal class Triangle : Rectangle
     {
-        //Camps
         private double _c;
         private double _h;
 
-        //Propieties
         public double C 
         { 
             get => _c;
@@ -24,14 +22,12 @@ namespace InheritanceExam
             set => _h = ValidateH(value);
         }
 
-        //constructor
         public Triangle(string Name, double a, double b, double c, double h) : base(Name, a, b)
         {
             C = c;
             H = h;
         }
 
-        //methods
         private double ValidateH(double H) => H;
         private double ValidateC(double C) => C;
         public override double GetArea() => (B * H) / 2;
