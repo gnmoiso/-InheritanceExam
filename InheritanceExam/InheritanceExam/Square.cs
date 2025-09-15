@@ -22,7 +22,14 @@ namespace InheritanceExam
             A = a;
         }
 
-        private double ValidateA(double value) => value;
+        private double ValidateA(double value)
+        {
+            if (value <= 0)
+            {
+                throw new Exception($"The Area {value} isn´t Valid");
+            }
+            return value;
+        }
         public override double GetArea() => Math.Pow(A, 2);
         public override double GetPerimeter() => 4 * A;
     }

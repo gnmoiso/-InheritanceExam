@@ -28,8 +28,22 @@ namespace InheritanceExam
             D2 = d2;
         }
 
-        private double ValidateD1(double D1) => D1;
-        private double ValidateD2(double D2) => D2;
+        private double ValidateD1(double D1)
+        {
+            if (D1 <= 0)
+            {
+                throw new Exception($"The Diagonal {D1} isn´t Valid");
+            }
+            return D1;
+        }
+        private double ValidateD2(double D2)
+        {
+            if (D2 <= 0)
+            {
+                throw new Exception($"The Diagonal {D2} isn´t Valid");
+            }
+            return D2;
+        }
         public override double GetArea() => (D1 * D2) / 2;
         public override double GetPerimeter() => 4 * A;
     }

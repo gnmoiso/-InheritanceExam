@@ -18,7 +18,14 @@ namespace InheritanceExam
 
         public Parallelogram(string Name, double a, double b, double h) : base(Name, a, b) => H = h;
 
-        private double ValidateH(double value) => value;
+        private double ValidateH(double value)
+        {
+            if (value <= 0)
+            {
+                throw new Exception($"The Height {value} isn´t Valid");
+            }
+            return value;
+        }
         public override double GetArea() => B * H;
         public override double GetPerimeter() => 2 * (A + B);
     }

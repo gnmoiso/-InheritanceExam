@@ -18,7 +18,15 @@ namespace InheritanceExam
 
         public Rectangle(string Name, double a, double b) : base(Name, a) => B = b;
 
-        private double ValidateB(double value) => value;
+        private double ValidateB(double value)
+        {
+            if (value <= 0)
+            {
+                throw new Exception($"The Base {value} isn´t Valid");
+            }
+            return value;
+        } 
+   
 
         public override double GetArea() => A * B;
 

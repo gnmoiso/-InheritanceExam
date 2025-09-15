@@ -22,7 +22,14 @@ namespace InheritanceExam
             R = r;
         }
 
-        private double ValidateR(double value) => value;
+        private double ValidateR(double value)
+        {
+            if (value <= 0)
+            {
+                throw new Exception($"The Radious {value} isn´t Valid");
+            }
+            return value;
+        }
         public override double GetArea() => (Math.PI * Math.Pow(R, 2));
         public override double GetPerimeter() => (2 * Math.PI * R);
     }
