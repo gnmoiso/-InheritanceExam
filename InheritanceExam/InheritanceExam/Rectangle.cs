@@ -19,7 +19,9 @@ namespace InheritanceExam
         public Rectangle(string Name, double a, double b) : base(Name, a) => B = b;
 
         private double ValidateB(double value) => value;
-        public override double GetArea() =>  A * B;
+
+        public override double GetArea() => A * B;
+
         public override double GetPerimeter() => 2 * (A + B);
     }
 }
